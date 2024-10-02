@@ -3,6 +3,9 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+  background-color: #000000;
 }
 
 header {
@@ -32,24 +35,53 @@ header .logo div {
 }
 
 header .logo img {
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   margin-top: 5px;
   display: flex;
 }
 
 .logo-text {
-  font-size: 24px;
-  font-weight: bold;
-  color: #c8c5c5;
-  margin-left: 12px;
-  vertical-align: middle;
-  display: inline;
+  /* Using utility class equivalents for consistency */
+  margin-top: 0.5rem; /* equivalent to mt-2 */
+  font-size: 30px; /* equivalent to text-lg */
+  font-weight: 600; /* equivalent to font-semibold */
+  margin-bottom: 1.25rem; /* adjusted for better spacing */
 }
 
-.logo-text:hover {
-  color: rgb(66, 35, 169);
-  transition: color 0.2s ease;
+.logo-text {
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(77, 84, 96);
+  position: relative;
+}
+
+.logo-text::before {
+  content: "brainyBREAKDOWN";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+
+  background-image: linear-gradient(
+    to right,
+    #45a0e6,
+    #34a8ff,
+    #56b3fa,
+    #ffffff,
+    #03a9f4
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  border-right: 2px solid rgb(255, 255, 255);
+  transition: width 1.5s ease-out; /* adjusted transition property */
+}
+
+.logo-text:hover::before {
+  width: 100%;
+  filter: drop-shadow(0 0 10px #56b3fa);
+  transition-delay: 0s;
 }
 
 header nav {
@@ -110,34 +142,44 @@ header nav a:focus-within::after {
 }
 
 header nav .button {
-  background-color: rgb(66, 35, 169);
+  background-image: linear-gradient(
+    to right,
+    #45a0e6,
+    #34a8ff,
+    #56b3fa,
+    #34a8ff,
+    #ffffff
+  );
+
   color: #fff;
   padding: 8px 25px;
   border-radius: 4px;
 }
 
 header nav .button:hover {
-  color: black;
+  color: rgb(255, 255, 255);
   filter: brightness(1.05);
+  text-decoration: none;
 }
 
-.MUSIFY-INTRO {
-  color: rgb(74, 39, 154);
+.BB-INTRO {
+  color: #56b3fa;
   text-align: center;
   margin-top: 70px;
   margin-bottom: 70px;
 }
 
 .container {
+  margin-left: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20 px 0;
-  gap: 130px;
+  gap: 80px;
 }
 
 .text {
-  color: rgb(66, 35, 169);
+  color: #56b3fa;
   max-width: 60%;
   font-size: 21px;
 }
@@ -241,7 +283,7 @@ header nav .button:hover {
   margin-right: 10px;
 } */
 
-.song-annimation {
+.main-image-container {
   display: inline-block;
   gap: 20px;
   justify-content: center;
@@ -249,28 +291,175 @@ header nav .button:hover {
   margin-top: 30px;
 
   width: 50%;
-  height: 370px;
-  background-color: #5a139839;
+  height: 400px;
   border-radius: 10px;
-  overflow: hidden;
+}
 
-  background-color: rgb(0, 0, 0);
-  border: 2px solid rgb(66, 35, 169);
-  color: white;
-  padding: 15px 32px;
+/* FEATURESSS PART !!! */
+
+.standOut {
+  margin-top: 150px;
+}
+
+.standOut h1 {
+  background-image: linear-gradient(
+    to right,
+    #45a0e6,
+    #34a8ff,
+    #56b3fa,
+    #f8f9f5,
+    #03a9f4
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 5px;
+  font-size: 50px;
+}
+.container1 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
-.TRAVIS-SCOTT {
-  margin-left: 50px;
+.card1 {
+  background: #010101;
+  width: 360px;
+  height: 600px;
+  margin: 50px;
+  border-radius: 20px;
 }
 
-.DRAKE {
-  margin-left: 50px;
+.card-image1 {
+  background-color: #2f2e30;
+  height: 300px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
 }
+
+.image1 {
+  background-image: url();
+}
+
+.all-h2 {
+  background-image: linear-gradient(
+    to right,
+    #fbfdff,
+    #34a8ff,
+    #56b3fa,
+    #f8f9f5,
+    #03a9f4
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 31px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.all-p {
+  text-align: left; /* Left align text within list items */
+  padding: 10px;
+  margin: 0;
+  position: relative;
+  padding-left: 20px;
+  background-image: linear-gradient(
+    to right,
+    #45a0e6,
+    #34a8ff,
+    #56b3fa,
+    #34a8ff,
+    #ffffff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+}
+
+.all-p::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.between-h2 {
+  text-align: center;
+  font-size: 31px;
+  color: #56b3fa;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.between-p {
+  text-align: left; /* Left align text within list items */
+  padding: 10px;
+  margin: 0;
+  position: relative;
+  padding-left: 20px;
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.between-p::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* CONTAINER 1 END */
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card2 {
+  background: #010101;
+  width: 360px;
+  height: 600px;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+.card-image2 {
+  background-color: #2f2e30;
+  height: 300px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.image2 {
+  background-image: url();
+}
+
+/* CONTAINER 2 END */
+
+/* .container3 {
+  display: flex;
+  justify-content: center;
+  padding: 10px; 
+}
+
+.card3 {
+  background: #fff;
+  width: 270px;
+  height: 400px;
+  margin: 10px;
+} */
+
+/* CONTAINER 3 END */
+
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+/* END OF FOOTER  */
