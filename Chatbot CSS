@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+.glow-button:hover {
+  color: rgb(207, 1, 1);
+  box-shadow: 0 5px 15px rgba(170, 5, 5, 0.833);
+}
+.chatbot {
+  width: 250px; /* Reduced width */
+  height: 400px; /* Reduced height */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 5px;
+  right: 20px;
+}
+header {
+  background-color: #0074CC;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.chatbox {
+  list-style-type: none;
+  padding: 10px;
+  height: calc(100% - 320px); /* Adjusted height to fit within the new size */
+  overflow-y: auto;
+}
+
+.chatbox li {
+  margin-bottom: 10px;
+}
+
+.chat-incoming {
+  text-align: left;
+}
+
+.chat-outgoing {
+  text-align: right;
+}
+
+.chat-input {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.quick-responses {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    margin-bottom: 5px; /* Space between buttons and textarea */
+}
+
+.quick-btn {
+    background-color: #0074CC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 5px; /* Space between buttons */
+}
+
+textarea {
+    flex-grow: 1; /* Allow textarea to grow */
+    border-radius: 5px;
+    resize: none; /* Disable resizing */
+    height: 20px; /* Set a fixed height for the textarea */
+}
+
+button {
+    background-color: #0074CC;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
