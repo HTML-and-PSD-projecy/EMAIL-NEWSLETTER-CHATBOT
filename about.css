@@ -26,7 +26,16 @@
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 12.5px rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: 0.5s;
+
+  }
+
+  .about-us:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgb(255, 255, 255);
+
   }
   
   .about-us h1 {
@@ -38,7 +47,15 @@
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 12.5px rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+
+    .founders:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgb(255, 255, 255);
+
   }
   
   .founders h2 {
