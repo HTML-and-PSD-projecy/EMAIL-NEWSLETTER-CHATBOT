@@ -28,14 +28,14 @@ p {
   padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  box-shadow: 0 5px 12.5px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 5px 12.5px #56b3fa;
   border-radius: 10px;
   transition: 0.5s;
 }
 
 .about-us:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 25px #56b3fa;
 }
 
 .about-us h1 {
@@ -49,14 +49,14 @@ p {
   padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  box-shadow: 0 5px 12.5px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 5px 12.5px #56b3fa;
   border-radius: 10px;
   transition: 0.5s;
 }
 
 .founders:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 25px #56b3fa;
 }
 
 .founders h2 {
@@ -84,3 +84,5 @@ p {
   border-radius: 50%;
   margin-bottom: 10px;
 }
+ 
+  
