@@ -1,28 +1,18 @@
-document.querySelectorAll('a[href^="#feature"]').forEach((anchor) => {
+// Combine event listeners for smooth scroll
+document.querySelectorAll('a[href^="#feature"], a[href^="#plans"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
     const targetId = this.getAttribute("href");
     const targetElement = document.querySelector(targetId);
 
-    // Scroll smoothly to the target element
-    targetElement.scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-
-document.querySelectorAll('a[href^="#plans"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const targetId = this.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
-
-    // Scroll smoothly to the target element
-    targetElement.scrollIntoView({
-      behavior: "smooth",
-    });
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      console.warn(`Target element ${targetId} not found.`);
+    }
   });
 });
 
@@ -74,11 +64,11 @@ function getBotResponse(input) {
   if (input.toLowerCase().includes("project")) {
     return "Brainy Breakdown gives you regular email updates.";
   } else if (input.toLowerCase().includes("standout")) {
-    return "We have features including catchy news,live engaging feed and news discussion.";
+    return "We have features including catchy news, live engaging feed, and news discussion.";
   } else if (input.toLowerCase().includes("plans")) {
-    return "Our subscriptions plans are monthly and quaterly.";
+    return "Our subscription plans are monthly and quarterly.";
   } else {
-    return "I'm sorry, I don't understand that.Please ask from the below questions.";
+    return "I'm sorry, I don't understand that. Please ask from the questions below.";
   }
 }
 
@@ -104,7 +94,6 @@ window.onload = function () {
 function closeChat() {
   document.querySelector(".chatbot").style.display = "none";
   document.getElementById("openChatBtn").style.display = "block"; // Show open button when chat is closed
-  clearChat(); // Clear the chat history when closing
 }
 
 function openChat() {
@@ -112,14 +101,13 @@ function openChat() {
   document.getElementById("openChatBtn").style.display = "none"; // Hide open button
 }
 
-// Function to clear the chatbox and local storage
+// Function to clear the chatbox without clearing chat history in local storage
 function clearChat() {
   const chatbox = document.getElementById("chatbox");
   while (chatbox.firstChild) {
     chatbox.removeChild(chatbox.firstChild); // Remove all messages from the chatbox
   }
-  localStorage.removeItem("chatHistory"); // Clear saved chat history in local storage
-  appendMessage("chat-incoming", "Hey! How can I assist you today?"); // Reset initial bot message
+  appendMessage("bot", "Hey! How can I assist you today?"); // Reset initial bot message
 }
 
 // Add event listener for open button
