@@ -712,13 +712,84 @@
   }
   
   footer {
-    background-color: #000000;
-    color: white;
-    text-align: center;
+    color: #fff;
     padding: 20px 0;
-    margin-top: 30px;
+    text-align: center;
   }
   
-  /* END OF FOOTER  */
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px 20px;
+  }
+  
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p, .footer-section ul, .footer-section a {
+    font-size: 16px;
+    line-height: 1.6;
+    border-radius: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    border-radius: 10px;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+    border-radius: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    border-radius: 10px;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #56b3fa;
+  }
+  
+  .footer-section .social a {
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  .footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+    margin: 0;
+  }
 
 
+
+
+hr{
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: #333;  /* old IE */
+  background-color: #333;  /* Modern Browsers */
+}
+  
