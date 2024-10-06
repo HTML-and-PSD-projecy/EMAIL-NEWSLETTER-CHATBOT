@@ -1,75 +1,86 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #000000;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    margin-bottom: 20px;
-  }
-  .about-us {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0 5px 12.5px rgb(255, 255, 255);
-    border-radius: 10px;
-    transition: 0.5s;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #000000;
+}
 
-  .about-us:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgb(255, 255, 255);
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
 
-  }
-  
-  .about-us h1 {
-    margin-top: 0;
-  }  
-  .founders {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0 5px 12.5px rgb(255, 255, 255);
-    border-radius: 10px;
-    transition: 0.5s;
-  }
+p {
+  margin-bottom: 20px;
+}
 
-    .founders:hover{
-        transform: translateY(-10px);
-        box-shadow: 0 10px 25px rgb(255, 255, 255);
+/* About Us Section */
+.about-us {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 12.5px rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  transition: 0.5s;
+}
 
-  }
-  
-  .founders h2 {
-    margin-top: 0;
-  }
-  
-  .founders-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .founder {
-    width: 25%;
-    margin: 20px;
-    text-align: center;
-  }
+.about-us:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.8);
+}
+
+.about-us h1 {
+  margin-top: 0;
+}
+
+/* Founders Section */
+.founders {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 12.5px rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.founders:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.8);
+}
+
+.founders h2 {
+  margin-top: 0;
+}
+
+/* Founders Grid */
+.founders-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.founder {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Founder Image */
+.founder img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
