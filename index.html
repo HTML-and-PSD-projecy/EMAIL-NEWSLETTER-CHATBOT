@@ -23,7 +23,7 @@
             <img src="bb-logo.png" alt="" />
           </div>
           <div>
-            <span class="logo-text">brainyBREAKDOWN</span>
+            <span class="logo-text">BrainyBreakdown</span>
           </div>
         </div>
 
@@ -35,11 +35,12 @@
             <span><a href="#features">FEATURES</a></span>
           </li>
           <li>
-            <span><a href="">ABOUT US</a></span>
+            <span><a href="#plans">PLANS</a></span>
           </li>
           <li>
-            <span><a href="">CONTACT US</a></span>
+            <span><a href="about.html">ABOUT US</a></span>
           </li>
+
           <li>
             <span><a href="login.html" class="button">Login/Register</a></span>
           </li>
@@ -169,39 +170,163 @@
 
     <!-- SECTION 3 END -->
 
-    <hr />
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section about">
-          <h3>About Us</h3>
-          <p>
-            We are a company dedicated to provide the most informative and
-            latest newsletter to our customers.
-          </p>
-        </div>
+    <!-- END OF FEATURES-->
 
-        <div class="footer-section links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Sign Up/Login</a></li>
-          </ul>
-        </div>
+    <!-- subscription -->
 
-        <div class="footer-section contact">
-          <h3>Contact Us</h3>
-          <p>Email: support@kallukaliya.com</p>
-          <p>Phone: 6969696969</p>
-        </div>
+    <div class="plan-text" id="plans">
+      <h1>Explore our paid plans... Be Brainy !</h1>
+    </div>
+
+    <!-- END OF STAND-OUT -->
+
+    <section class="plan-container1">
+      <div class="plan-card1">
+        <div class="plan-card-image1 image1"></div>
+        <h2 class="plan-all-h2">CATCHY NEWS</h2>
+
+        <p class="plan-all-p">- Provide readers with timely news updates</p>
+        <p class="plan-all-p">- Covers wide range of topics and interest</p>
+        <p class="plan-all-p">
+          - Incorporates visual elements such as images, infographics, or videos
+        </p>
+        <center>
+          <div class="buy">
+            <a href="login.html" class="buyNow-button"> BUY NOW </a>
+          </div>
+        </center>
+        <!--buy button closing-->
       </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2024 Brainy Breakdown. All Rights Reserved.</p>
+      <!--plan-card closing-->
+      <div class="plan-card1-between">
+        <div class="plan-card-image1"></div>
+        <h2 class="plan-between-h2">LIVE ENGAGING FEED</h2>
+        <p class="plan-between-p">
+          - Express your emotions and sentiments using variety of emojis
+        </p>
+        <p class="plan-between-p">
+          - Fostering discussions as they comment on news posts
+        </p>
+        <p class="plan-between-p">- Provides visual cues through images</p>
+        <center>
+          <div class="buy">
+            <a href="login.html" class="buyNow-button"> BUY NOW </a>
+          </div>
+        </center>
+        <!--buy button closing-->
       </div>
-    </footer>
+      <!--plan-card-between closing-->
+      <div class="plan-card1">
+        <div class="plan-card-image1"></div>
+        <h2 class="plan-all-h2">NEWS DISCUSSION</h2>
+
+        <p class="plan-all-p">- Provide readers with timely news updates</p>
+        <p class="plan-all-p">- Covers wide range of topics and interest</p>
+        <p class="plan-all-p">
+          - Incorporates visual elements such as images, infographics, or videos
+        </p>
+        <center>
+          <div class="buy">
+            <a href="login.html" class="buyNow-button"> BUY NOW </a>
+          </div>
+        </center>
+        <!--buy button closing-->
+      </div>
+      <!--plan-card closing-->
+    </section>
+
+    <center>
+      <a href="plans.html" class="view-button"> View more </a>
+    </center>
+
+    <!-- SECTION 1 END -->
+
+    <div class="all-footer">
+      <hr />
+
+      <!-- START OF FOOTER-->
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>
+              We are a company dedicated to provide the most informative and
+              latest newsletter to our customers.
+            </p>
+          </div>
+
+          <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="online_newsletter_base.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="login.html">Sign Up/Login</a></li>
+            </ul>
+          </div>
+
+          <!-- making of chat-bot -->
+          <div
+            class="button glow-button"
+            id="openChatBtn"
+            style="
+              position: fixed;
+              bottom: 20px;
+              right: 20px;
+              background-color: #0074cc;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              padding: 10px;
+              cursor: pointer;
+            "
+          >
+            Open Chatbot
+          </div>
+
+          <div class="chatbot" style="display: none">
+            <header>
+              <h2>Chatbot</h2>
+              <span id="close" onclick="closeChat()">X</span>
+            </header>
+            <ul id="chatbox" class="chatbox">
+              <li class="chat-incoming chat">
+                Hey! How can I assist you today?
+              </li>
+            </ul>
+            <div class="chat-input">
+              <div id="quickResponses" class="quick-responses">
+                <button class="quick-btn">Tell me about your project.</button>
+                <button class="quick-btn">What makes you standout?</button>
+                <button class="quick-btn">Tell me subscriptions plans.</button>
+              </div>
+              <textarea
+                id="userInput"
+                placeholder="Type a message..."
+              ></textarea>
+              <button id="sendBtn">Send</button>
+              <div id="typingIndicator" style="display: none">
+                Bot is typing...
+              </div>
+            </div>
+          </div>
+          <!-- end of chatbot -->
+
+          <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@kallukaliya.com</p>
+            <p>Phone: 6969696969</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 Brainy Breakdown. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
 
     <script src="/style.js"></script>
+    <script src="chatbot-work.js"></script>
   </body>
 </html>
