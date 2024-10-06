@@ -1,79 +1,84 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Brainy Breakdown</title>
-    <link rel="stylesheet" href="contact1.css"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <center><section
-    class="ABOUT US">
-      <h1>Contact Us!</h1>
-      <p>Get in touch with us for any queries or feedback.</p>
-     <div class="container">
-          <div class="company-info">
-              <h2>Company Information</h2>
-              <div class="info-box">
-                  <h3>Address:</h3>
-                  <p>Christ University Delhi NCR<br> Mariyum Nagar<br>Ghaziabad</p>
-                  <h3>Contact:</h3>
-                  <p>Phone:<br> +91 8448330721<br>Email:<br>BrainyBreakdown@gmail.com</p>
-                  <h3>POSTOFFICE:</h3>
-                  <p>Mariyum nagar <br>
-                      post office10293</p>
-              </div>
-          </div>
-        <center><form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea><br><br>
-            <input type="submit" value="Send">
-        </form>
-    </section></center>
+    <header>
+        <div class="inner">
+            <div class="logo">
+                <img src="bb-logo.png" alt="Logo" />
+                <span class="logo-text">BrainyBreakdown</span>
+            </div>
 
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#features">FEATURES</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="login.html" class="button">Login/Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .contact-us {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            margin-bottom: 10px;
-        }
-        input, textarea {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #3e8e41;
-        }
-    </style>
+    <section class="contact-section">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>If you have any questions, feel free to reach out to us by filling out the form below.</p>
+            <form>
+                <div class="name-fields">
+                    <div class="form-group">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" required>
+                    </div>
+                </div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <input class="submit-btn" type="submit" value="Send">
+            </form>
+        </div>
+    </section>
+    <hr>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section about">
+          <h4>About us</h4>
+          <p>Welcome to Brainy Breakdown (Online Email Newsletter), your ultimate destination for staying informed, engaged, and connected with the latest news and discussions that matter.</p>
+        </div>
+        
+        <div class="footer-section links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="plans.html">Plans</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-section social">
+          <h4>Connect with Us</h4>
+          <p>Call us at: 8448330721</p>
+          <p>Mail us at: </p><a href="mailto:BrainyBreakdown@gmail.com">BrainyBreakdown@gmail.com</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Brainy Breakdown | All Rights Reserved</p>
+      </div>
+    </footer>
+    
 </body>
 </html>
