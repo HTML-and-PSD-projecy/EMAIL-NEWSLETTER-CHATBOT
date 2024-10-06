@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>brainyBREAKDOWN</title>
-    <link rel="stylesheet" href="online_newsletter_base_style.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <link
       rel="stylesheet"
@@ -286,10 +286,10 @@
           </div>
 
           <div class="chatbot" style="display: none">
-            <header>
-              <h2>Chatbot</h2>
+            <div class="header">
+              <h2 class="cb">Chatbot</h2>
               <span id="close" onclick="closeChat()">X</span>
-            </header>
+            </div>
             <ul id="chatbox" class="chatbox">
               <li class="chat-incoming chat">
                 Hey! How can I assist you today?
@@ -306,9 +306,6 @@
                 placeholder="Type a message..."
               ></textarea>
               <button id="sendBtn">Send</button>
-              <div id="typingIndicator" style="display: none">
-                Bot is typing...
-              </div>
             </div>
           </div>
           <!-- end of chatbot -->
@@ -326,7 +323,7 @@
       </footer>
     </div>
 
-    <script src="/style.js"></script>
-    <script src="chatbot-work.js"></script>
+    <script src="style.js"></script>
+    <script src="chatbot.js"></script>
   </body>
 </html>
