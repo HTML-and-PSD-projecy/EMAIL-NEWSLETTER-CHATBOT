@@ -3,74 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MUSIFY</title>
-    <link rel="stylesheet" href="login_style.css" />
+    <link rel="stylesheet" href="login-dummy-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Tangerine"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
+    <title>Login & Registration Form</title>
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <div class="form-box">
-        <div class="logo-container">
-          <div class="logo-wrapper">
-            <img
-              src="musify-logo.png"
-              alt="Musify_Logo"
-              loading="lazy"
-              decoding="async"
-            />
+    <!-- MAKE A LOGIN PAGE -->
+    <div class="login-container">
+      <div class="curved-shape"></div>
+      <div class="curved-shape2"></div>
+      <div class="form-box Login">
+        <h2 class="animation" style="--D: 0; --S: 21">Login</h2>
+        <form action="#">
+          <div class="input-box animation" style="--D: 1; --S: 22">
+            <input type="text" required />
+            <i class="fas fa-user"></i>
+            <label for="">Username</label>
           </div>
-          <!--end of logo-wrapper-->
-          <p class="musify-name-top">MUSIFY</p>
-        </div>
-        <!--end of logo container-->
-
-        <h1 class="title">Create new account</h1>
-
-        <div class="underline"></div>
-        <p class="miss">Listen music for free!</p>
-
-        <form>
-          <div class="input-group">
-            <div class="input-field namefield">
-              <i class="fa-solid fa-user"></i>
-              <input type="text" placeholder="Name" />
-            </div>
-            <!--END INPUT-FIELD-->
-
-            <div class="input-field">
-              <i class="fa-solid fa-user"></i>
-              <input type="email" placeholder="Email or Username" />
-            </div>
-            <!--END INPUT-FIELD-->
-
-            <div class="input-field">
-              <i class="fa-solid fa-lock"></i>
-              <input type="password" placeholder="Enter your password" />
-            </div>
-            <!--END INPUT-FIELD-->
+          <div class="input-box animation" style="--D: 2; --S: 23">
+            <input type="password" required />
+            <i class="fas fa-lock"></i>
+            <label for="">Password</label>
+          </div>
+          <div class="input-box animation" style="--D: 3; --S: 24">
+            <button class="btn" type="submit">Login</button>
+          </div>
+          <div class="regi-link animation" style="--D: 4; --S: 25">
             <p>
-              <span class="text">PASSWORD SUGGESTIONS</span>
-              <a href="#">Click Here!</a>
+              Don't have an account? <a href="#" class="SignUpLink">Sign up</a>
             </p>
           </div>
-          <!--END INPUT-GROUP-->
-          <div class="btn-field">
-            <button type="button" class="signupbtn">SIGN UP</button>
-            <button type="button" class="disable signinbtn">SIGN IN</button>
-          </div>
-          <!-- END OF BTN-FIELD -->
         </form>
       </div>
-      <!--END OF FORM BOX-->
+      <div class="info-content Login">
+        <h2 class="animation" style="--D: 0; --S: 20">WELCOME BACK!</h2>
+        <p class="animation" style="--D: 1; --S: 21">
+          BrainyBreakdown your one stop for reading news!
+        </p>
+      </div>
+
+      <div class="form-box Register">
+        <h2 class="animation" style="--li: 17; --S: 0">Register</h2>
+        <form action="#">
+          <div class="input-box animation" style="--li: 18; --S: 1">
+            <input type="text" required />
+            <i class="fas fa-user"></i>
+            <label for="">Username</label>
+          </div>
+
+          <div class="input-box animation" style="--li: 18; --S: 1">
+            <input type="email" required />
+            <i class="fa-solid fa-envelope"></i>
+            <label for="">Email</label>
+          </div>
+
+          <div class="input-box animation" style="--li: 19; --S: 2">
+            <input type="password" required />
+            <i class="fas fa-lock"></i>
+            <label for="">Password</label>
+          </div>
+          <div class="input-box animation" style="--li: 20; --S: 3">
+            <button class="btn" type="submit">Register</button>
+          </div>
+          <div class="regi-link animation" style="--li: 21; --S: 4">
+            <p>
+              Don't have an account? <a href="#" class="SignInLink">Sign in</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="info-content Register">
+        <h2 class="animation" style="--li: 17; --S: 0">WELCOME BACK!</h2>
+        <p class="animation" style="--li: 18; --S: 1">
+          BrainyBreakdown your one stop for reading news!
+        </p>
+      </div>
     </div>
-    <!--END OF CONTAINER-->
-    <script src="/style.js"></script>
+    <script src="login-dummy-work.js"></script>
   </body>
 </html>
