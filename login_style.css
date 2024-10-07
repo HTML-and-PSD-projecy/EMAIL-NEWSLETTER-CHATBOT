@@ -6,12 +6,93 @@
   color: #fff;
 }
 
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.back-arrow {
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  position: relative; /* added position: relative */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px; /* adjust the width as needed */
+  height: 50px; /* adjust the height as needed */
+  margin-right: 5px; /* reduced margin from 10px to 5px */
+}
+
+.logo-text {
+  font-size: 24px; /* adjust the font size as needed */
+  -webkit-text-stroke: 1px rgb(77, 84, 96);
+  color: transparent;
+  font-weight: bold;
+  position: relative; /* added position: relative */
+}
+
+.logo-text::before {
+  content: "BrainyBreakdown";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+
+  background-image: linear-gradient(
+    to right,
+    #45a0e6,
+    #34a8ff,
+    #56b3fa,
+    #ffffff,
+    #03a9f4
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  border-right: 2px solid rgb(255, 255, 255);
+  transition: width 1.5s ease-out;
+}
+
+.logo-text:hover::before {
+  width: 100%;
+  filter: drop-shadow(0 0 10px #56b3fa);
+  transition-delay: 0s;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #000000;
+  margin: 0;
+  padding-top: 150px; /* Add space from the top */
+}
+
+.main-section {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: #000000;
+  width: 100%;
+  padding: 0 20px; /* Add horizontal padding for responsiveness */
 }
 
 .login-container {
@@ -21,6 +102,7 @@ body {
   border: 2px solid #56b3fa;
   box-shadow: 0 0 25px #56b3fa;
   overflow: hidden;
+  margin-bottom: 40px; /* Add space between the login box and the footer */
 }
 
 .login-container .form-box {
@@ -139,7 +221,7 @@ body {
   cursor: pointer;
   overflow: hidden;
   z-index: 1;
-  transition: background-color 0.5s, color 0.5s; /* Add transition for background-color and color */
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .btn::before {
@@ -147,24 +229,23 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #56b3fa; /* Change background color to #56b3fa */
+  background: #56b3fa;
   top: 0;
   left: 0;
   z-index: -1;
-  transition: opacity 0.5s; /* Add transition for opacity */
+  transition: opacity 0.5s;
 }
 
 .btn:hover {
-  color: #ffffff; /* Change text color to #ffffff */
+  color: #ffffff;
 }
 
 .btn:hover::before {
-  opacity: 1; /* Change opacity to 1 on hover */
+  opacity: 1;
 }
 
-/* Add initial opacity to .btn::before */
 .btn::before {
-  opacity: 0; /* Add initial opacity to 0 */
+  opacity: 0;
 }
 
 .regi-link {
@@ -281,4 +362,90 @@ body {
 .login-container.active .curved-shape2 {
   transform: rotate(-11deg) skewY(-41deg);
   transition-delay: 1.2s;
+}
+
+.all-footer {
+  width: 100%;
+  margin-top: 20px;
+}
+
+footer {
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px 20px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  border-radius: 10px;
+}
+
+.footer-section ul li a:hover {
+  color: #56b3fa;
+}
+
+.footer-section .social a {
+  text-decoration: none;
+  font-size: 24px;
+  margin-right: 10px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #555;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin: 0;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  color: #333;
+  background-color: #333;
 }
