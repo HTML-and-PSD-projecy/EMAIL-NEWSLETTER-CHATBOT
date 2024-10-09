@@ -318,6 +318,8 @@ header nav .button:hover {
 }
 
 .card1 {
+  border: 5px solid #56b3fa;
+  
   background: #010101;
   width: 360px;
   height: 600px;
@@ -326,6 +328,8 @@ header nav .button:hover {
 }
 
 .card-image1 {
+  border-bottom: 2px solid #56b3fa;
+  box-shadow: 0 0 20px #56b3fa;
   background-color: #2f2e30;
   height: 300px;
   margin-bottom: 15px;
@@ -334,7 +338,7 @@ header nav .button:hover {
 }
 
 .image1 {
-  background-image: url();
+  background-image: url(image.png);
 }
 
 .all-h2 {
@@ -414,6 +418,7 @@ header nav .button:hover {
 }
 
 .card2 {
+  border:5px solid #56b3fa;
   background: #010101;
   width: 360px;
   height: 600px;
@@ -430,7 +435,7 @@ header nav .button:hover {
 }
 
 .image2 {
-  background-image: url();
+  background-image: url(image.png);
 }
 
 /* CONTAINER 2 END */
@@ -511,7 +516,7 @@ header nav .button:hover {
 }
 
 .plan-image1 {
-  background-image: url();
+  background-image: url(image.png);
 }
 
 .plan-all-h2 {
@@ -636,6 +641,7 @@ header nav .button:hover {
 }
 
 .chatbox {
+  color: white;
   list-style-type: none;
   padding: 10px;
   height: 170px; /* Adjusted height to fit within the new size */
@@ -788,4 +794,22 @@ hr {
   /* Set the hr color */
   color: #333; /* old IE */
   background-color: #333; /* Modern Browsers */
+}
+
+.buy{
+  margin-top: 30px;
+}
+.buyNow-button{
+  color: #56b3fa;
+  background-color: white;
+  border: 2px solid #56b3fa;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+.buyNow-button:hover{
+  color: #fff;
+  background-color: #56b3fa;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.5);
 }
