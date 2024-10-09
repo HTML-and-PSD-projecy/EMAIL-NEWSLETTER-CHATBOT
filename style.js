@@ -1,45 +1,60 @@
 // Combine event listeners for smooth scroll
-document.querySelectorAll('a[href^="#feature"], a[href^="#plans"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+document
+  .querySelectorAll('a[href^="#feature"], a[href^="#plans"]')
+  .forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
 
-    const targetId = this.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
+      const targetId = this.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
 
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-      });
-    } else {
-      console.warn(`Target element ${targetId} not found.`);
-    }
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+        });
+      } else {
+        console.warn(`Target element ${targetId} not found.`);
+      }
+    });
   });
-});
+
+document.getElementById("openChatBtn").onclick = function () {
+  // Show the chatbot when open button is clicked
+  document.querySelector(".chatbot").style.display = "block";
+  document.getElementById("openChatBtn").style.display = "none"; // Hide the open button
+};
+
+function closeChat() {
+  // Hide the chatbot and show the open button when the close button is clicked
+  document.querySelector(".chatbot").style.display = "none";
+  document.getElementById("openChatBtn").style.display = "block";
+}
 
 document.getElementById("sendBtn").onclick = function () {
-  let userInput = document.getElementById("userInput").value;
+  const userInput = document.getElementById("userInput").value.trim();
 
-  if (userInput.trim() !== "") {
-    appendMessage("user", userInput);
-    document.getElementById("userInput").value = ""; // Clear input field
+  if (userInput !== "") {
+    appendMessage("user", userInput); // Add user's message to the chat
+    document.getElementById("userInput").value = ""; // Clear the input field
 
     // Show typing indicator
     document.getElementById("typingIndicator").style.display = "block";
 
-    // Simulate bot response
+    // Simulate a delay for the bot response
     setTimeout(() => {
       document.getElementById("typingIndicator").style.display = "none"; // Hide typing indicator
-      let botResponse = getBotResponse(userInput);
-      appendMessage("bot", botResponse);
-      saveChatHistory(userInput, botResponse); // Save chat history
+      const botResponse = getBotResponse(userInput); // Get bot response based on input
+      appendMessage("bot", botResponse); // Add bot's response to the chat
+      saveChatHistory(userInput, botResponse); // Save chat history in local storage
     }, 1000);
   }
 };
 
-// Add event listener for quick response buttons
+// Function to handle quick response buttons
 document.querySelectorAll(".quick-btn").forEach((button) => {
   button.addEventListener("click", function () {
-    document.getElementById("userInput").value = this.textContent; // Set textarea value to button text
+    const quickMessage = this.textContent;
+    document.getElementById("userInput").value = quickMessage; // Set textarea value to the button text
     document.getElementById("sendBtn").click(); // Trigger send button click
   });
 });
@@ -50,17 +65,16 @@ function appendMessage(sender, message) {
   const messageElement = document.createElement("li");
   messageElement.className =
     sender === "user" ? "chat-outgoing chat" : "chat-incoming chat";
-
   messageElement.textContent = message;
 
   chatbox.appendChild(messageElement);
 
-  // Scroll to the bottom of the chatbox
+  // Scroll to the bottom of the chatbox to show the latest message
   chatbox.scrollTop = chatbox.scrollHeight;
 }
 
 function getBotResponse(input) {
-  // Simple responses based on user input
+  // Simple responses based on keywords in the user's input
   if (input.toLowerCase().includes("project")) {
     return "Brainy Breakdown gives you regular email updates.";
   } else if (input.toLowerCase().includes("standout")) {
@@ -68,7 +82,7 @@ function getBotResponse(input) {
   } else if (input.toLowerCase().includes("plans")) {
     return "Our subscription plans are monthly and quarterly.";
   } else {
-    return "I'm sorry, I don't understand that. Please ask from the questions below.";
+    return "I'm sorry, I don't understand that. Please select a question from the quick responses.";
   }
 }
 
@@ -91,24 +105,5 @@ window.onload = function () {
   getChatHistory();
 };
 
-function closeChat() {
-  document.querySelector(".chatbot").style.display = "none";
-  document.getElementById("openChatBtn").style.display = "block"; // Show open button when chat is closed
-}
-
-function openChat() {
-  document.querySelector(".chatbot").style.display = "block"; // Show chatbot when open button is clicked
-  document.getElementById("openChatBtn").style.display = "none"; // Hide open button
-}
-
-// Function to clear the chatbox without clearing chat history in local storage
-function clearChat() {
-  const chatbox = document.getElementById("chatbox");
-  while (chatbox.firstChild) {
-    chatbox.removeChild(chatbox.firstChild); // Remove all messages from the chatbox
-  }
-  appendMessage("bot", "Hey! How can I assist you today?"); // Reset initial bot message
-}
-
-// Add event listener for open button
-document.getElementById("openChatBtn").onclick = openChat;
+// Optional: Typing indicator (add this inside your HTML if you need it)
+// <div id="typingIndicator" style="display:none;">Bot is typing...</div>
