@@ -1,23 +1,19 @@
-// Combine event listeners for smooth scroll
-document
-  .querySelectorAll('a[href^="#feature"], a[href^="#plans"]')
-  .forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
 
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
+    const targetId = this.getAttribute("href");
+    const targetElement = document.getElementById(targetId.substring(1));
 
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-        });
-      } else {
-        console.warn(`Target element ${targetId} not found.`);
-      }
-    });
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      console.warn(`Target element ${targetId} not found.`);
+    }
   });
-
+});
 document.getElementById("openChatBtn").onclick = function () {
   // Show the chatbot when open button is clicked
   document.querySelector(".chatbot").style.display = "block";
