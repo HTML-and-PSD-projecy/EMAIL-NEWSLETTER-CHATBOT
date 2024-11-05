@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap;
+  background-color: #000000;
+}
+
+body {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  text-align: center; /* Center text */
+}
+
+h1 {
+  color: #56b3fa; /* Optional: Change text color for better contrast */
+  font-size: 50px;
+}
