@@ -338,7 +338,7 @@ header nav .button:hover {
 }
 
 .image1 {
-  background-image: url(image.png);
+  background-image: url(news.jpeg);
 }
 
 .all-h2 {
@@ -419,6 +419,7 @@ header nav .button:hover {
 
 .card2 {
   border: 5px solid #56b3fa;
+
   background: #010101;
   width: 360px;
   height: 600px;
@@ -427,6 +428,8 @@ header nav .button:hover {
 }
 
 .card-image2 {
+  border-bottom: 2px solid #56b3fa;
+  box-shadow: 0 0 20px #56b3fa;
   background-color: #2f2e30;
   height: 300px;
   margin-bottom: 15px;
@@ -435,25 +438,138 @@ header nav .button:hover {
 }
 
 .image2 {
-  background-image: url(image.png);
+  background-image: url(feed.jpeg);
 }
 
 /* CONTAINER 2 END */
 
-/* .container3 {
+.container3 {
   display: flex;
   justify-content: center;
-  padding: 10px; 
+  padding: 10px;
 }
 
 .card3 {
-  background: #fff;
-  width: 270px;
-  height: 400px;
-  margin: 10px;
-} */
+  border: 5px solid #56b3fa;
+
+  background: #010101;
+  width: 360px;
+  height: 600px;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+.card-image3 {
+  border-bottom: 2px solid #56b3fa;
+  box-shadow: 0 0 20px #56b3fa;
+  background-color: #2f2e30;
+  height: 300px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.image3 {
+  background-image: url(discussion.jpeg);
+}
 
 /* CONTAINER 3 END */
+
+.container4 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card4 {
+  border: 5px solid #56b3fa;
+
+  background: #010101;
+  width: 360px;
+  height: 600px;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+.card-image4 {
+  border-bottom: 2px solid #56b3fa;
+  box-shadow: 0 0 20px #56b3fa;
+  background-color: #2f2e30;
+  height: 300px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.image4 {
+  background-image: url(email.jpeg);
+}
+
+/* CONTAINER 4 END */
+
+.container5 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card5 {
+  border: 5px solid #56b3fa;
+
+  background: #010101;
+  width: 360px;
+  height: 600px;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+.card-image5 {
+  border-bottom: 2px solid #56b3fa;
+  box-shadow: 0 0 20px #56b3fa;
+  background-color: #2f2e30;
+  height: 300px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.image5 {
+  background-image: url(worthyPlan.jpeg);
+}
+
+/* CONTAINER 5 END */
+
+.container6 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card6 {
+  border: 5px solid #56b3fa;
+
+  background: #010101;
+  width: 360px;
+  height: 600px;
+  margin: 50px;
+  border-radius: 20px;
+}
+
+.card-image6 {
+  border-bottom: 2px solid #56b3fa;
+  box-shadow: 0 0 20px #56b3fa;
+  background-color: #2f2e30;
+  height: 300px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.image6 {
+  background-image: url(brainyBot.jpeg);
+}
+
+/* CONTAINER 6 END */
 
 /* START OF PLANS */
 
