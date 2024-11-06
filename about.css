@@ -107,7 +107,8 @@ header nav .button {
   padding: 8px 20px;
   border-radius: 4px;
   font-size: 18px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-image 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-image 0.2s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 1;
@@ -119,7 +120,12 @@ header nav .button:hover {
   background-image: linear-gradient(to right, #56b3fa, #56b3fa);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
@@ -188,11 +194,11 @@ p {
 /* Founder Image */
 .founder img {
   width: 100%;
-  height: auto;
+  height: 300px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
- 
+
 footer {
   color: #fff;
   padding: 20px 0;
@@ -219,7 +225,9 @@ footer {
   margin-bottom: 10px;
 }
 
-.footer-section p, .footer-section ul, .footer-section a {
+.footer-section p,
+.footer-section ul,
+.footer-section a {
   font-size: 16px;
   line-height: 1.6;
   border-radius: 10px;
@@ -265,13 +273,10 @@ footer {
   margin: 0;
 }
 
-
-
-
-hr{
-border: none;
-height: 1px;
-/* Set the hr color */
-color: #333;  /* old IE */
-background-color: #333;  /* Modern Browsers */
+hr {
+  border: none;
+  height: 1px;
+  /* Set the hr color */
+  color: #333; /* old IE */
+  background-color: #333; /* Modern Browsers */
 }
